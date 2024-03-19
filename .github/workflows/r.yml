@@ -1,12 +1,4 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-#
-# See https://github.com/r-lib/actions/tree/master/examples#readme for
-# additional example workflows available for the R community.
-
-name: R
+name: RShiny
 
 on:
   push:
@@ -19,22 +11,20 @@ permissions:
 
 jobs:
   build:
-    runs-on: macos-latest
-    strategy:
-      matrix:
-        r-version: ['4.1.1']
-
+    runs-on: ubuntu-latest
+    services:
+      shiny-server:
+        image: rocker/shiny:4.1.1
+        ports:
+          - 8180:3838
     steps:
       - uses: actions/checkout@v3
-      - name: Set up R ${{ matrix.r-version }}
+      - name: Set up R
         uses: r-lib/actions/setup-r@f57f1301a053485946083d7a45022b278929a78a
         with:
-          r-version: ${{ matrix.r-version }}
-      - name: Install dependencies
+          r-version: '4.1.1'
+      - name: Install R packages
         run: |
-          install.packages(c("remotes", "rcmdcheck"))
-          remotes::install_deps(dependencies = TRUE)
-        shell: Rscript {0}
-      - name: Check
-        run: rcmdcheck::rcmdcheck(args = "--no-manual", error_on = "error")
-        shell: Rscript {0}
+          R -e "install.packages(c('shiny', 'dplyr', 'ggplot2', 'gapminder'), repos='https://cloud.r-project.org/')"
+      - name: Run Shiny App
+        run: R -e "shiny::runApp('/path/to/your/app.R', host='0.0.0.0', port=8180)"
