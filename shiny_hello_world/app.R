@@ -13,7 +13,7 @@ ui <- fluidPage(
     sidebarPanel(
       tags$h4("Gapminder Dashboard"),
       tags$hr(),
-      selectInput(inputId = "inContinent", label = "Continent", choices = unique(gapminder$continent), selected = "Europe")
+      selectInput(inputId = "inContinent", label = "Continent", choices = unique(gapminder$continent), selected = "Europe") # nolint
     ),
     mainPanel(
       plotOutput(outputId = "outChartLifeExp"),
