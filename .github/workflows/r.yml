@@ -1,30 +1,37 @@
-name: RShiny
+name: R Shiny CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main
   pull_request:
-    branches: [ "main" ]
-
-permissions:
-  contents: read
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    services:
-      shiny-server:
-        image: rocker/shiny:4.1.1
-        ports:
-          - 8180:3838
+    
     steps:
-      - uses: actions/checkout@v3
-      - name: Set up R
-        uses: r-lib/actions/setup-r@f57f1301a053485946083d7a45022b278929a78a
-        with:
-          r-version: '4.3.3'
-      - name: Install R packages
-        run: |
-          R -e "install.packages(c('shiny', 'dplyr', 'ggplot2', 'gapminder'), repos='https://cloud.r-project.org/')"
-      - name: Run Shiny App
-        run: R -e "shiny::runApp('/path/to/your/app.R', host='0.0.0.0', port=8180)"
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
+    - name: Set up R
+      uses: r-lib/actions/setup-r@v1
+      with:
+        r-version: '4.3.3'  # Set your desired R version here
+      
+    - name: Install dependencies
+      run: |
+        R -e 'source("src/applications/install.R")'
+      
+    - name: Check if Shiny app runs
+      run: |
+        R -e 'shiny::runApp("src/applications/app.R", port = 3838, host = "0.0.0.0") &'
+        sleep 5
+        curl -I http://localhost:3838  # Check if the app responds with headers
+        killall R  # Stop the Shiny app
+      
+    - name: Check R code style
+      run: |
+        R -e 'lintr::lint_package()'
