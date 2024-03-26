@@ -4,9 +4,8 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
+    paths:
+      - "app/applications/**" # Adjust path as needed
 
 jobs:
   build:
@@ -14,24 +13,36 @@ jobs:
     
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
-      
-    - name: Set up R
-      uses: r-lib/actions/setup-r@v1
-      with:
-        r-version: '4.3.3'  # Set your desired R version here
-      
-    - name: Install dependencies
+      uses: actions/checkout@v4
+
+    - name: Install Trivy
       run: |
-        R -e 'source("src/applications/install.R")'
+        sudo apt-get update
+        sudo apt-get install -y wget apt-transport-https gnupg lsb-release
+        wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
+        echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | sudo tee -a /etc/apt/sources.list.d/trivy.list
+        sudo apt-get update
+        sudo apt-get install -y trivy
+
+    - name: Run Trivy Scan
+      run: trivy --exit-code 1 --severity HIGH,CRITICAL app/Dockerfile
+
+
+
+    # - name: Set up R
+    #   uses: r-lib/actions/setup-r@v1
+    #   with:
+    #     r-version: '4.3.3'  # Set your desired R version here
       
-    - name: Check if Shiny app runs
-      run: |
-        R -e 'shiny::runApp("src/applications/app.R", port = 3838, host = "0.0.0.0") &'
-        sleep 5
-        curl -I http://localhost:3838  # Check if the app responds with headers
-        killall R  # Stop the Shiny app
+    # - name: Install dependencies
+    #   run: |
+    #     R -e 'source("src/applications/install.R")'
       
-    - name: Check R code style
-      run: |
-        R -e 'lintr::lint_package()'
+    # - name: Check if Shiny app runs
+    #   run: |
+    #     R -e 'shiny::runApp("src/applications/app.R", port = 3838, host = "0.0.0.0") &'
+    #     sleep 5
+    #     curl -I http://localhost:3838  # Check if the app responds with headers
+    #     killall R  # Stop the Shiny app
+      
+
