@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  shiny_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3838:3838"
+    environment:
+      - IMAGE_NAME=shiny_app
+
+  trivy:
+    image: aquasec/trivy:latest
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./trivy_reports:/root/.cache/trivy
+    command: ["--severity", "HIGH,CRITICAL", "${IMAGE_NAME}"]
