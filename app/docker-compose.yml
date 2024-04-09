@@ -10,9 +10,4 @@ services:
     environment:
       - IMAGE_NAME=shiny_app
 
-  trivy:
-    image: aquasec/trivy:latest
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - ./trivy_reports:/root/.cache/trivy
-    command: ["--severity", "HIGH,CRITICAL", "${IMAGE_NAME}"]
+
