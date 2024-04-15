@@ -1,0 +1,9 @@
+site_name: R-Epi-Analytics-Documentations
+
+theme: readthedocs
+
+nav:
+  - Home: README2.md
+
+  - Tech Stack: 
+    - Docker: Why-Docker.md

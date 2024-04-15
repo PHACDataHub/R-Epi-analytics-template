@@ -1,0 +1,33 @@
+I have a few comments/thoughts in no particular order:
+
+**********************DONE**********************
+I recommend putting TLDRs at the top of a document (e.g. R-Epi-analytics-template/documentation/How-To-Use.md at main · PHACDataHub/R-Epi-analytics-template (github.com)). The kind of people who don't have the time/bandwidth to read the full page might also not be willing to scroll to the bottom of the document 😋.
+**********************DONE**********************
+
+
+Regarding R-Epi-analytics-template/documentation/TechStackChoices.md at main · PHACDataHub/R-Epi-analytics-template (github.com), I recommend highlighting the Open Container Initiative (OCI) standard (see Open Container Initiative - Open Container Initiative (opencontainers.org)). There's a surprisingly long history to the concept of containerization. Docker was the first implementation that was feasible for the average developer to adopt quickly, hence why containerization exploded in the mid 2010s. However, since then, quite a few players have entered the market. Surprisingly, Docker isn't even on the list of CNCF graduated container runtime environments! See CNCF Landscape (the "Container Runtime" section). The reason devs still almost universally use Docker, though, is that Docker (like all other container runtimes) implements the OCI specification, making docker images interoperable across container runtimes.
+
+**********************DONE**********************
+Personally, I would also downplay the Microservices point slightly - others on the team may disagree with me, but I would argue there are use cases where microservices isn't the appropriate architecture. Microservices (youtube.com) Here's a funny video that highlights the ways that microservices can be complicated. That's not to say "never use microservices", but I think the ideal architecture needs to be evaluated on a case-by-case basis, and usually sits somewhere between "pure monolith" and "pure microservices".
+**********************DONE**********************
+
+
+
+This doesn't need to happen right away, but I recommend eventually setting up a docs site hosted on GitHub pages. See https://github.com/PHACDataHub/ruok-service-autochecker for an example of how to use mkdocs (MkDocs) to host a docs site (e.g. Observatory (R U OK?) Documentation (phacdatahub.github.io)). I like how you've separated multiple topic-specific docs in the documentation folder, but it would be nice to have a navigation menu or similar to allow navigating across pages.
+
+
+Something else you might want to think about too are pre-commit hooks (Git - Git Hooks (git-scm.com)). The purpose is to check certain things locally before you commit / push code to the remote server. Example use case: run a secret scan tool locally before allowing a commit in case someone is about to commit credentials to the codebase.
+
+
+
+[2:38 PM] Brown, Collin (PHAC/ASPC)
+
+One more thing!
+
+ 
+
+Adding a workflow status badge - GitHub Docs It could be cool to add a workflow status badge to the README.md document (e.g. indicate trivy scan passing). Again not super urgent but, in my opinion, a cool feature to add.
+
+Adding a workflow status badge - GitHub Docs
+
+You can display a status badge in your repository to indicate the status of your workflows.

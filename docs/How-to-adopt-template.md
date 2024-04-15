@@ -41,4 +41,3 @@ Ensure everything is correct before pushing the project to GitHub.
 Once you are satisfied with your local setup, push the project to GitHub. This will trigger the workflow to build your Docker image and run Trivy scans. If any high or critical vulnerabilities are found, the workflow will fail, preventing the changes from being pushed to GitHub until the issues are addressed.
 
 Trivy will automatically run a scan on the image once it is pushed to GitHub.
-

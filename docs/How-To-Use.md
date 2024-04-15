@@ -3,6 +3,8 @@
 This documentation outlines the steps to modify the `app.R` and `install_dependencies.R` files in an R Shiny application and how to ensure that Docker reflects these changes.
 
 
+## TLDR
+Modifying the `app.R` and `install_dependencies.R` files allows you to customize the behavior and appearance of your R Shiny application. By following the steps outlined in this documentation, you can make changes to these files and ensure that Docker reflects these modifications when running the containerized application.
 
 ## Modifying app.R
 
@@ -43,6 +45,3 @@ docker-compose down && docker-compose up -d
 This command will stop any running containers and then start them again with the updated configurations.
 
 2. **View Changes**: Access your R Shiny application through a web browser using the specified host port. You should see the modifications reflected in the application.
-
-## TLDR
-Modifying the `app.R` and `install_dependencies.R` files allows you to customize the behavior and appearance of your R Shiny application. By following the steps outlined in this documentation, you can make changes to these files and ensure that Docker reflects these modifications when running the containerized application.
