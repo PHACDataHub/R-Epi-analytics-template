@@ -27,4 +27,4 @@ steps:
           docker push $image
         else
           exit 0
-        f
+        fi
