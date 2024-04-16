@@ -37,3 +37,6 @@ jobs:
           ignore-unfixed: true
           vuln-type: "os,library"
           severity: "CRITICAL,HIGH"
+          ignore-file: ".trivyignore" # Create a .trivyignore file if not already present
+          show-suppressed: true        # Add this line to include --show-suppressed option
+          

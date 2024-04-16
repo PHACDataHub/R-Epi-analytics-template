@@ -1,14 +1,17 @@
-# Use an official R runtime as the base image
+# Use the desired version of rocker/r-ver as the base image
 FROM rocker/r-ver:latest
+
+# Using the latest causes a CVE-2024-26597. This is related to the rocker/re-ver not managing
 
 # Set the working directory in the container
 WORKDIR /usr/src/app
 
 # Install system dependencies
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y --no-install-recommends \
     libcurl4-openssl-dev \
     libssl-dev \
-    libxml2-dev
+    libxml2-dev \
+    && apt-get clean
 
 # Copy the local files into the container
 COPY ./applications /usr/src/app/applications

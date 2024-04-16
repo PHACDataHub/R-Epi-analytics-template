@@ -1,0 +1,4 @@
+# List of ignored files
+## Updated: April 16th, 2024
+
+The decision to ignore CVE-2024-26597 in the vulnerability scan is primarily influenced by the dependency on the `rocker/r-ver` base image. The vulnerability is related to the Linux kernel and is likely to be resolved through an update of the `rocker/r-ver` image to a version that addresses CVE-2024-26597. Until such an update is made available and incorporated into the project's Dockerfile, the vulnerability remains unresolved. Therefore, ignoring CVE-2024-26597 temporarily allows the development team to prioritize updating the `rocker/r-ver` base image to a version that mitigates the vulnerability. Once the base image is updated, the ignore directive can be removed, ensuring a more comprehensive approach to addressing security vulnerabilities within the application environment. Regular maintenance and updates of base images are essential practices to maintain the security posture of containerized applications.
