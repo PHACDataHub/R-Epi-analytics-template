@@ -2,7 +2,7 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     id: build-if-tag-created
     entrypoint: 'bash'
-    dir: rstudio-image
+    dir: rstudio
     args:
       - '-c'
       - |
