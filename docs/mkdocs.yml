@@ -3,7 +3,7 @@ site_dir: docs
 
 site_url: https://phacdatahub.github.io/R-Epi-analytics-template/
 
-# theme: readthedocs
+
 theme:
   name: material
   palette:
@@ -16,6 +16,20 @@ extra:
   social:
     - icon: fontawesome/brands/github 
       link: https://phacdatahub.github.io/R-Epi-analytics-template/
+
+plugins:
+  - search:
+      separator: '[\s\-\.]+'
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [api/src]
+
+markdown_extensions:
+  - pymdownx.snippets
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.superfences      
 
 
 nav:
