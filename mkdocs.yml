@@ -1,7 +1,22 @@
 site_name: R-Epi-Analytics-Documentations
 site_dir: docs
 
-theme: readthedocs
+site_url: https://phacdatahub.github.io/R-Epi-analytics-template/
+
+# theme: readthedocs
+theme:
+  name: material
+  palette:
+    primary: indigo
+    accent: blue
+
+repo_url: https://phacdatahub.github.io/R-Epi-analytics-template/
+
+extra:
+  social:
+    - icon: fontawesome/brands/github 
+      link: https://phacdatahub.github.io/R-Epi-analytics-template/
+
 
 nav:
   - Home: index.md
