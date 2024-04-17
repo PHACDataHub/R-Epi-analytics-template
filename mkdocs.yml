@@ -1,4 +1,5 @@
 site_name: R-Epi-Analytics-Documentations
+site_dir: docs
 
 theme: readthedocs
 
