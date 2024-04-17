@@ -6,15 +6,17 @@ This documentation outlines the steps to modify the `app.R` and `install_depende
 ## TLDR
 Modifying the `app.R` and `install_dependencies.R` files allows you to customize the behavior and appearance of your R Shiny application. By following the steps outlined in this documentation, you can make changes to these files and ensure that Docker reflects these modifications when running the containerized application.
 
-## Modifying app.R
+# Getting Started - Modifying app.R
 
 The `app.R` file typically contains the main code for your R Shiny application. You can make changes to this file to update the UI layout, add new visualizations, or modify the server logic.
 
 ### Steps to Modify app.R:
 
-1. **Open app.R**: Locate the `app.R` file in your project directory and open it in a text editor or an R development environment.
+### Step 1 : **Open app.R**
+ Locate the `app.R` file in your project directory and open it in a text editor or an R development environment.
 
-2. **Make Changes**: Modify the code according to your requirements. You can add new UI elements using Shiny functions like `sliderInput`, `selectInput`, `plotOutput`, etc. You can also update the server logic to handle new input elements or generate different outputs.
+### Step 2 : **Make Changes** 
+Modify the code according to your requirements. You can add new UI elements using Shiny functions like `sliderInput`, `selectInput`, `plotOutput`, etc. You can also update the server logic to handle new input elements or generate different outputs.
 
 3. **Save Changes**: Once you've made the necessary modifications, save the `app.R` file.
 

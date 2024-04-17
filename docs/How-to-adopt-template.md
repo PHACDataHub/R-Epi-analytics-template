@@ -12,12 +12,12 @@ Before proceeding with the migration, ensure that you have the following prerequ
 
 - Basic knowledge of Docker, Docker Compose, and Trivy.
 - Familiarity with R Shiny applications.
-- Read the [How-To-Use](#documentation\How-To-Use.md) documentation.
+- Read the [How-To-Use](How-To-Use.md) documentation.
 - Downloaded the required applications from the ReadMe file.
 
 ## Migration Steps
 
-### 1. Project Structure Adjustment
+### Step 1 : Project Structure Adjustment
 
 Ensure your project structure aligns with the expected structure for Docker, Trivy, and R Shiny:
 
@@ -27,7 +27,7 @@ Ensure your project structure aligns with the expected structure for Docker, Tri
 
 Ensure that `app.R` and `install_dependancies.R` are properly filled out before proceeding to the next step.
 
-### 2. Docker Compose
+### Step 2 : Docker Compose
 
 Run the following command to build the image and run the app.R file on [localhost:3838](http://localhost:3838):
 
@@ -37,7 +37,7 @@ docker compose up -d
 
 Ensure everything is correct before pushing the project to GitHub.
 
-### 3. Push to GitHub
+### Step 3 : Push to GitHub
 Once you are satisfied with your local setup, push the project to GitHub. This will trigger the workflow to build your Docker image and run Trivy scans. If any high or critical vulnerabilities are found, the workflow will fail, preventing the changes from being pushed to GitHub until the issues are addressed.
 
 Trivy will automatically run a scan on the image once it is pushed to GitHub.

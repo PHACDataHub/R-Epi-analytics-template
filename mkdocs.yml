@@ -3,7 +3,12 @@ site_name: R-Epi-Analytics-Documentations
 theme: readthedocs
 
 nav:
-  - Home: README2.md
-
+  - Home: index.md
   - Tech Stack: 
-    - Docker: Why-Docker.md
+      - Docker: techstack/Docker.md
+      - How to Use: How-To-Use.md
+      - How to Adopt Template: How-to-adopt-template.md
+      - How to Run Trivy Locally: How-to-run-trivy-locally.md
+      - How to Update Pages: How-to-update-pages.md
+      - Tech Stack Choices: TechStackChoices.md
+      - Trivy Ignored Files: Trivy_ignored_files.md
