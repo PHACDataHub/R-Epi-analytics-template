@@ -32,11 +32,16 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Tech Stack: 
-      - Docker: techstack/Docker.md
-      - How to Use: How-To-Use.md
-      - How to Adopt Template: How-to-adopt-template.md
-      - How to Run Trivy Locally: How-to-run-trivy-locally.md
-      - How to Update Pages: How-to-update-pages.md
-      - Tech Stack Choices: TechStackChoices.md
+  - Documentation : 
+    - How To :
+      - How to Use: documentation/how_to/How-to-adopt-template.md
+      - How to Adopt Template: documentation/how_to/How-to-adopt-template.md
+      - How to Run Trivy Locally: documentation/how_to/How-to-run-trivy-locally.md
+      - How the website is built : documentation/how_to/How-website-works.md
+      - How to Update Pages: documentation/how_to/How-to-update-pages.md
+    - Tech Stack: 
+      - Docker: documentation/documentation/techstack/Docker.md
+      - Mkdocs: documentation/techstack/Mkdocs.md
+      - Trivy : documentation/techstack/trivy.md
+      - R : documentation/techstack/R.md
       - Trivy Ignored Files: Trivy_ignored_files.md
