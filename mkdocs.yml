@@ -34,14 +34,14 @@ nav:
   - Home: index.md
   - Documentation : 
     - How To :
-      - How to Use: documentation/how_to/How-to-adopt-template.md
-      - How to Adopt Template: documentation/how_to/How-to-adopt-template.md
-      - How to Run Trivy Locally: documentation/how_to/How-to-run-trivy-locally.md
-      - How the website is built : documentation/how_to/How-website-works.md
-      - How to Update Pages: documentation/how_to/How-to-update-pages.md
+      - How to Use: how_to/How-to-adopt-template.md
+      - How to Adopt Template: how_to/How-to-adopt-template.md
+      - How to Run Trivy Locally: how_to/How-to-run-trivy-locally.md
+      - How the website is built : how_to/How-website-works.md
+      - How to Update Pages: how_to/How-to-update-pages.md
     - Tech Stack: 
-      - Docker: documentation/documentation/techstack/Docker.md
-      - Mkdocs: documentation/techstack/Mkdocs.md
-      - Trivy : documentation/techstack/trivy.md
-      - R : documentation/techstack/R.md
+      - Docker: techstack/Docker.md
+      - Mkdocs: techstack/Mkdocs.md
+      - Trivy : techstack/trivy.md
+      - R : techstack/R.md
       - Trivy Ignored Files: Trivy_ignored_files.md
