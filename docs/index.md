@@ -9,7 +9,7 @@ Docker, Trivy, and R Shiny offer a powerful tech stack for developing, container
 - [Making changes to the app.R file](#making-changes-to-the-appr-file)
 - [Tech Stack Overview](#techstack-overview)
 
-- Important Links: 
+#### Important Links: 
   - [How to use](how_to/How-to-use-pages.md)
   - [Adding additional pages to the website](how_to/How-to-update-pages.md)
   - [Adoptation template](how_to/How-to-adopt-template.md)
