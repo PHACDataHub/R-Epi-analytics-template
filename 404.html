@@ -56,10 +56,12 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="light-blue">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -107,7 +109,33 @@
     </div>
     
       
+        <form class="md-header__option" data-md-component="palette">
+  
     
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 2c-1.82 0-3.53.5-5 1.35C8 5.08 10 8.3 10 12s-2 6.92-5 8.65C6.47 21.5 8.18 22 10 22a10 10 0 0 0 10-10A10 10 0 0 0 10 2Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -306,7 +334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/R-Epi-analytics-template/documentation/how_to/How-to-adopt-template.md" class="md-nav__link">
+      <a href="/R-Epi-analytics-template/how_to/How-to-adopt-template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -327,11 +355,11 @@
   
   
     <li class="md-nav__item">
-      <a href="/R-Epi-analytics-template/documentation/how_to/How-to-adopt-template.md" class="md-nav__link">
+      <a href="/R-Epi-analytics-template/how_to/How-to-adopt-template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    How to Adopt Template
+    How to Use
   </span>
   
 
@@ -348,7 +376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/R-Epi-analytics-template/documentation/how_to/How-to-run-trivy-locally.md" class="md-nav__link">
+      <a href="/R-Epi-analytics-template/how_to/How-to-run-trivy-locally/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -369,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/R-Epi-analytics-template/documentation/how_to/How-website-works.md" class="md-nav__link">
+      <a href="/R-Epi-analytics-template/how_to/How-website-works/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -390,7 +418,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/R-Epi-analytics-template/documentation/how_to/How-to-update-pages.md" class="md-nav__link">
+      <a href="/R-Epi-analytics-template/how_to/How-to-update-pages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -454,7 +482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/R-Epi-analytics-template/documentation/documentation/techstack/Docker.md" class="md-nav__link">
+      <a href="/R-Epi-analytics-template/techstack/Docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -475,7 +503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/R-Epi-analytics-template/documentation/techstack/Mkdocs.md" class="md-nav__link">
+      <a href="/R-Epi-analytics-template/techstack/Mkdocs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -496,7 +524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/R-Epi-analytics-template/documentation/techstack/trivy.md" class="md-nav__link">
+      <a href="/R-Epi-analytics-template/techstack/trivy.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -517,7 +545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/R-Epi-analytics-template/documentation/techstack/R.md" class="md-nav__link">
+      <a href="/R-Epi-analytics-template/techstack/R/" class="md-nav__link">
         
   
   <span class="md-ellipsis">

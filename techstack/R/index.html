@@ -11,6 +11,10 @@
         <link rel="canonical" href="https://phacdatahub.github.io/R-Epi-analytics-template/techstack/R/">
       
       
+        <link rel="prev" href="../Mkdocs/">
+      
+      
+        <link rel="next" href="../../Trivy_ignored_files/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -18,7 +22,7 @@
     
     
       
-        <title>R and R Shiny: Statistical Computing and Web Applications - R-Epi-Analytics-Documentations</title>
+        <title>R - R-Epi-Analytics-Documentations</title>
       
     
     
@@ -58,10 +62,12 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="light-blue">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -106,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              R and R Shiny: Statistical Computing and Web Applications
+              R
             
           </span>
         </div>
@@ -114,7 +120,33 @@
     </div>
     
       
+        <form class="md-header__option" data-md-component="palette">
+  
     
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 2c-1.82 0-3.53.5-5 1.35C8 5.08 10 8.3 10 12s-2 6.92-5 8.65C6.47 21.5 8.18 22 10 22a10 10 0 0 0 10-10A10 10 0 0 0 10 2Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -240,17 +272,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -264,7 +298,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Documentation
@@ -313,7 +347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/how_to/How-to-adopt-template.md" class="md-nav__link">
+      <a href="../../how_to/How-to-adopt-template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -334,11 +368,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/how_to/How-to-adopt-template.md" class="md-nav__link">
+      <a href="../../how_to/How-to-adopt-template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    How to Adopt Template
+    How to Use
   </span>
   
 
@@ -355,7 +389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/how_to/How-to-run-trivy-locally.md" class="md-nav__link">
+      <a href="../../how_to/How-to-run-trivy-locally/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -376,7 +410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/how_to/How-website-works.md" class="md-nav__link">
+      <a href="../../how_to/How-website-works/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -397,7 +431,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/how_to/How-to-update-pages.md" class="md-nav__link">
+      <a href="../../how_to/How-to-update-pages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -423,17 +457,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -447,7 +483,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             Tech Stack
@@ -461,7 +497,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/documentation/techstack/Docker.md" class="md-nav__link">
+      <a href="../Docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -482,7 +518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/techstack/Mkdocs.md" class="md-nav__link">
+      <a href="../Mkdocs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -503,7 +539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../documentation/techstack/trivy.md" class="md-nav__link">
+      <a href="../trivy.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -521,10 +557,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../documentation/techstack/R.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    R
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -533,6 +589,113 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tldr" class="md-nav__link">
+    <span class="md-ellipsis">
+      TLDR
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-r" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is R:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-install-r" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Install R:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to Install R:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      macOS:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-r-shiny" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is R Shiny:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-install-r-shiny" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Install R Shiny:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-r-and-r-shiny-are-important" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why R and R Shiny are Important:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 

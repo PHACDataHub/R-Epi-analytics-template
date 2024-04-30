@@ -12,7 +12,7 @@
       
       
       
-        <link rel="next" href="Trivy_ignored_files/">
+        <link rel="next" href="how_to/How-to-adopt-template/">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -60,10 +60,12 @@
   
     
     
+      
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="light-blue">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -116,7 +118,33 @@
     </div>
     
       
+        <form class="md-header__option" data-md-component="palette">
+  
     
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="light-blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 2c-1.82 0-3.53.5-5 1.35C8 5.08 10 8.3 10 12s-2 6.92-5 8.65C6.47 21.5 8.18 22 10 22a10 10 0 0 0 10-10A10 10 0 0 0 10 2Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -271,13 +299,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#table-of-contents" class="md-nav__link">
+  <a href="#getting-started" class="md-nav__link">
     <span class="md-ellipsis">
-      Table of Contents
+      Getting Started
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Table of Contents">
+    <nav class="md-nav" aria-label="Getting Started">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -335,6 +363,57 @@
   <a href="#access-the-application" class="md-nav__link">
     <span class="md-ellipsis">
       Access the Application:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#techstack-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Techstack Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Techstack Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trivy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trivy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r" class="md-nav__link">
+    <span class="md-ellipsis">
+      R
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mkdocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mkdocs
     </span>
   </a>
   
@@ -430,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="documentation/how_to/How-to-adopt-template.md" class="md-nav__link">
+      <a href="how_to/How-to-adopt-template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -451,11 +530,11 @@
   
   
     <li class="md-nav__item">
-      <a href="documentation/how_to/How-to-adopt-template.md" class="md-nav__link">
+      <a href="how_to/How-to-adopt-template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    How to Adopt Template
+    How to Use
   </span>
   
 
@@ -472,7 +551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="documentation/how_to/How-to-run-trivy-locally.md" class="md-nav__link">
+      <a href="how_to/How-to-run-trivy-locally/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -493,7 +572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="documentation/how_to/How-website-works.md" class="md-nav__link">
+      <a href="how_to/How-website-works/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -514,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="documentation/how_to/How-to-update-pages.md" class="md-nav__link">
+      <a href="how_to/How-to-update-pages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -578,7 +657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="documentation/documentation/techstack/Docker.md" class="md-nav__link">
+      <a href="techstack/Docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -599,7 +678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="documentation/techstack/Mkdocs.md" class="md-nav__link">
+      <a href="techstack/Mkdocs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -620,7 +699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="documentation/techstack/trivy.md" class="md-nav__link">
+      <a href="techstack/trivy.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -641,7 +720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="documentation/techstack/R.md" class="md-nav__link">
+      <a href="techstack/R/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -718,13 +797,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#table-of-contents" class="md-nav__link">
+  <a href="#getting-started" class="md-nav__link">
     <span class="md-ellipsis">
-      Table of Contents
+      Getting Started
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Table of Contents">
+    <nav class="md-nav" aria-label="Getting Started">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -792,6 +871,57 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#techstack-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Techstack Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Techstack Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trivy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trivy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r" class="md-nav__link">
+    <span class="md-ellipsis">
+      R
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mkdocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mkdocs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -809,7 +939,7 @@
 
 <h1 id="r-epi-analytics-template">R Epi Analytics Template</h1>
 <p>Docker, Trivy, and R Shiny offer a powerful tech stack for developing, containerizing, securing, and deploying web applications. With straightforward installation and deployment processes, even users with no prior experience can leverage these tools for robust application development and deployment.</p>
-<h2 id="table-of-contents">Table of Contents</h2>
+<h2 id="getting-started">Getting Started</h2>
 <ul>
 <li><a href="#application-requirements">Application Requirements</a></li>
 <li><a href="#how-to-run-the-application">How to Run the Application</a></li>
@@ -823,12 +953,16 @@
 <li><a href="how_to/How-to-adopt-template/">Adoptation template</a></li>
 </ul>
 <h2 id="application-requirements">Application Requirements</h2>
-<p>Before running the R Shiny application and using Docker and Trivy, you'll need to install the necessary software and dependencies. Below are the installation instructions for each application:
-- <strong>R Shiny</strong>: 
-  - Download R from the <a href="https://www.r-project.org/">R Project website</a>
-  - Get RStudio Desktop from the <a href="https://posit.co/download/rstudio-desktop/">RStudio website</a></p>
+<p>Before running the R Shiny application and using Docker and Trivy, you'll need to install the necessary software and dependencies. Below are the installation instructions for each application:</p>
 <ul>
-<li><strong>Docker</strong>: </li>
+<li><strong>R Shiny</strong>: </li>
+<li>Download R from the <a href="https://www.r-project.org/">R Project website</a></li>
+<li>
+<p>Get RStudio Desktop from the <a href="https://posit.co/download/rstudio-desktop/">RStudio website</a></p>
+</li>
+<li>
+<p><strong>Docker</strong>: </p>
+</li>
 <li>
 <p>Install Docker Desktop from the <a href="https://www.docker.com/get-started">Docker website</a></p>
 </li>
@@ -839,15 +973,13 @@
 </ul>
 <h2 id="how-to-run-the-application">How to Run the Application</h2>
 <p>Once you have installed R, Docker, and Trivy, you can run the R Shiny application using Docker:</p>
-<ul>
-<li>Navigate to the Application Directory (src/app): Open a terminal or command prompt and go to src/App.
+<p>Navigate to the Application Directory (src/app): Open a terminal or command prompt and go to src/App.
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>cd app/
-</code></pre></div></td></tr></table></div></li>
-</ul>
-<p>Run this command in the terminal Build and Run Docker Containers:</p>
-<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>docker compose up
-</code></pre></div></td></tr></table></div>
-This starts the Docker containers and deploys the R Shiny application.</p>
+</code></pre></div></td></tr></table></div></p>
+<p>Run this command in the terminal Build and Run Docker Containers:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>docker compose up
+</code></pre></div></td></tr></table></div></p>
+<p>This starts the Docker containers and deploys the R Shiny application.</p>
 <p>For a more detailed explination on How to Run the Application, <a href="how_to/How-to-use/">click here</a> </p>
 <h2 id="making-changes-to-the-appr-file">Making changes to the app.R file</h2>
 <p>When making changes to the app.R file, you'll need to run the following command to see the updates live on the application hosted at <a href="http:localhost:3838">localhost:3838</a>
@@ -857,7 +989,7 @@ This starts the Docker containers and deploys the R Shiny application.</p>
 <p>For a more detailed explination on How to Run the Application, <a href="how_to/How-to-use/">click here</a> </p>
 <h3 id="access-the-application">Access the Application:</h3>
 <p>After the containers start, access the R Shiny application by opening a web browser and going to http://localhost:3838.</p>
-<h1 id="techstack-overview">Techstack Overview</h1>
+<h2 id="techstack-overview">Techstack Overview</h2>
 <h3 id="docker">Docker</h3>
 <p>Docker is a containerization platform that simplifies the deployment and management of applications by packaging them into lightweight, portable containers. Installation is straightforward on Windows, Linux, and macOS, enabling developers to quickly adopt Docker across various operating systems.</p>
 <p>For more on Docker, <a href="techstack/Docker/">click here</a></p>
