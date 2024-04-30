@@ -6,37 +6,57 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://phacdatahub.github.io/R-Epi-analytics-template/How-To-Use/</loc>
-         <lastmod>2024-04-30</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://phacdatahub.github.io/R-Epi-analytics-template/How-to-adopt-template/</loc>
-         <lastmod>2024-04-30</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://phacdatahub.github.io/R-Epi-analytics-template/How-to-run-trivy-locally/</loc>
-         <lastmod>2024-04-30</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://phacdatahub.github.io/R-Epi-analytics-template/How-to-update-pages/</loc>
-         <lastmod>2024-04-30</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://phacdatahub.github.io/R-Epi-analytics-template/TechStackChoices/</loc>
-         <lastmod>2024-04-30</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://phacdatahub.github.io/R-Epi-analytics-template/Trivy_ignored_files/</loc>
          <lastmod>2024-04-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://phacdatahub.github.io/R-Epi-analytics-template/how_to/How-to-adopt-template/</loc>
+         <lastmod>2024-04-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://phacdatahub.github.io/R-Epi-analytics-template/how_to/How-to-run-trivy-locally/</loc>
+         <lastmod>2024-04-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://phacdatahub.github.io/R-Epi-analytics-template/how_to/How-to-update-pages/</loc>
+         <lastmod>2024-04-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://phacdatahub.github.io/R-Epi-analytics-template/how_to/How-to-use/</loc>
+         <lastmod>2024-04-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://phacdatahub.github.io/R-Epi-analytics-template/how_to/How-website-works/</loc>
+         <lastmod>2024-04-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://phacdatahub.github.io/R-Epi-analytics-template/techstack/Docker/</loc>
+         <lastmod>2024-04-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://phacdatahub.github.io/R-Epi-analytics-template/techstack/Mkdocs/</loc>
+         <lastmod>2024-04-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://phacdatahub.github.io/R-Epi-analytics-template/techstack/R/</loc>
+         <lastmod>2024-04-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://phacdatahub.github.io/R-Epi-analytics-template/techstack/TechStackChoices/</loc>
+         <lastmod>2024-04-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://phacdatahub.github.io/R-Epi-analytics-template/techstack/Trivy/</loc>
          <lastmod>2024-04-30</lastmod>
          <changefreq>daily</changefreq>
     </url>

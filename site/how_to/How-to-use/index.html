@@ -8,28 +8,24 @@
       
       
       
-        <link rel="canonical" href="https://phacdatahub.github.io/R-Epi-analytics-template/TechStackChoices/">
+        <link rel="canonical" href="https://phacdatahub.github.io/R-Epi-analytics-template/how_to/How-to-use/">
       
       
-        <link rel="prev" href="../How-to-update-pages/">
       
       
-        <link rel="next" href="../Trivy_ignored_files/">
-      
-      
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
     
     
       
-        <title>Tech Stack Choices - R-Epi-Analytics-Documentations</title>
+        <title>Modifying app.R and install_dependencies.R for Docker Deployment - R-Epi-Analytics-Documentations</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.66ac8b77.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +44,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -65,7 +61,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-gray" data-md-color-accent="blue">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -74,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#selection-of-docker-and-trivy-as-tech-stack" class="md-skip">
+        <a href="#modifying-appr-and-install_dependenciesr-for-docker-deployment" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +86,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="R-Epi-Analytics-Documentations" class="md-header__button md-logo" aria-label="R-Epi-Analytics-Documentations" data-md-component="logo">
+    <a href="../.." title="R-Epi-Analytics-Documentations" class="md-header__button md-logo" aria-label="R-Epi-Analytics-Documentations" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -110,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tech Stack Choices
+              Modifying app.R and install_dependencies.R for Docker Deployment
             
           </span>
         </div>
@@ -197,7 +193,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="R-Epi-Analytics-Documentations" class="md-nav__button md-logo" aria-label="R-Epi-Analytics-Documentations" data-md-component="logo">
+    <a href="../.." title="R-Epi-Analytics-Documentations" class="md-nav__button md-logo" aria-label="R-Epi-Analytics-Documentations" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -227,7 +223,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -244,36 +240,69 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
-    Tech Stack
+    Documentation
   </span>
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            Tech Stack
+            Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    How To
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            How To
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -284,28 +313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../techstack/Docker/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Docker
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../How-To-Use/" class="md-nav__link">
+      <a href="../How-to-adopt-template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -368,6 +376,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../How-website-works/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How the website is built
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../How-to-update-pages/" class="md-nav__link">
         
   
@@ -382,127 +411,8 @@
 
               
             
-              
-                
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Tech Stack Choices
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Tech Stack Choices
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tldr" class="md-nav__link">
-    <span class="md-ellipsis">
-      TLDR
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker" class="md-nav__link">
-    <span class="md-ellipsis">
-      Docker
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Docker">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#reasons-for-choosing-docker" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reasons for Choosing Docker:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#trivy" class="md-nav__link">
-    <span class="md-ellipsis">
-      Trivy
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Trivy">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#reasons-for-choosing-trivy" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reasons for Choosing Trivy:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
+          </ul>
+        </nav>
       
     </li>
   
@@ -515,8 +425,127 @@
   
   
   
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tech Stack
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Tech Stack
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../Trivy_ignored_files/" class="md-nav__link">
+      <a href="../../techstack/Docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../techstack/Mkdocs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mkdocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../techstack/trivy.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trivy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../techstack/R/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    R
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Trivy_ignored_files/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -525,6 +554,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -572,63 +609,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    <span class="md-ellipsis">
-      Introduction
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#docker" class="md-nav__link">
-    <span class="md-ellipsis">
-      Docker
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Docker">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#reasons-for-choosing-docker" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reasons for Choosing Docker:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#trivy" class="md-nav__link">
-    <span class="md-ellipsis">
-      Trivy
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Trivy">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#reasons-for-choosing-trivy" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reasons for Choosing Trivy:
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -644,42 +624,45 @@
                   
 
 
-<h1 id="selection-of-docker-and-trivy-as-tech-stack">Selection of Docker and Trivy as Tech Stack</h1>
+<h1 id="modifying-appr-and-install_dependenciesr-for-docker-deployment">Modifying app.R and install_dependencies.R for Docker Deployment</h1>
+<p>This documentation outlines the steps to modify the <code>app.R</code> and <code>install_dependencies.R</code> files in an R Shiny application and how to ensure that Docker reflects these changes.</p>
 <h2 id="tldr">TLDR</h2>
-<p>The selection of Docker as our containerization platform and Trivy as our container vulnerability scanner is driven by their robust features, reliability, and community support. By leveraging Docker and Trivy in our tech stack, we aim to streamline the development and deployment process while ensuring the security and integrity of our containerized applications.</p>
-<h2 id="introduction">Introduction</h2>
-<p>In our project, we have carefully evaluated various technologies for containerization and container security. After thorough consideration, we have chosen Docker as our containerization platform and Trivy as our container vulnerability scanner. This document outlines the reasons behind our selection of Docker and Trivy as our tech stack.</p>
-<h2 id="docker">Docker</h2>
-<h3 id="reasons-for-choosing-docker">Reasons for Choosing Docker:</h3>
+<p>Modifying the <code>app.R</code> and <code>install_dependencies.R</code> files allows you to customize the behavior and appearance of your R Shiny application. By following the steps outlined in this documentation, you can make changes to these files and ensure that Docker reflects these modifications when running the containerized application.</p>
+<h1 id="getting-started-modifying-appr">Getting Started - Modifying app.R</h1>
+<p>The <code>app.R</code> file typically contains the main code for your R Shiny application. You can make changes to this file to update the UI layout, add new visualizations, or modify the server logic.</p>
+<h3 id="steps-to-modify-appr">Steps to Modify app.R:</h3>
+<h3 id="step-1-open-appr">Step 1 : <strong>Open app.R</strong></h3>
+<p>Locate the <code>app.R</code> file in your project directory and open it in a text editor or an R development environment.</p>
+<h3 id="step-2-make-changes">Step 2 : <strong>Make Changes</strong></h3>
+<p>Modify the code according to your requirements. You can add new UI elements using Shiny functions like <code>sliderInput</code>, <code>selectInput</code>, <code>plotOutput</code>, etc. You can also update the server logic to handle new input elements or generate different outputs.</p>
+<ol>
+<li><strong>Save Changes</strong>: Once you've made the necessary modifications, save the <code>app.R</code> file.</li>
+</ol>
+<h2 id="modifying-install_dependenciesr">Modifying install_dependencies.R</h2>
+<p>The <code>install_dependencies.R</code> file contains the dependencies required by your R Shiny application. These dependencies may include R packages that are necessary for the application to function correctly.</p>
+<h3 id="steps-to-modify-install_dependenciesr">Steps to Modify install_dependencies.R:</h3>
 <ol>
 <li>
-<p><strong>Standardization</strong>: Docker provides a standardized way to package, distribute, and run applications within containers. This standardization simplifies the development and deployment process, ensuring consistency across different environments.</p>
+<p><strong>Open install_dependencies.R</strong>: Locate the <code>install_dependencies.R</code> file in your project directory and open it in a text editor or an R development environment.</p>
 </li>
 <li>
-<p><strong>Portability</strong>: Docker containers are portable and can run on any machine that has Docker installed, regardless of the underlying operating system or infrastructure. This portability makes it easier to deploy applications across different environments, from development to production.</p>
+<p><strong>Update Dependencies</strong>: Add, remove, or update the R package dependencies listed in the file. You can use the <code>install.packages</code> function to install new packages or update existing ones.</p>
 </li>
 <li>
-<p><strong>Resource Efficiency</strong>: Docker containers share the host system's kernel, which makes them lightweight and resource-efficient compared to virtual machines. This efficiency allows for better utilization of hardware resources and scalability of applications.</p>
-</li>
-<li>
-<p><strong>Ecosystem</strong>: Docker has a vibrant ecosystem with a wide range of tools, libraries, and community support. This ecosystem provides solutions for various aspects of the development and deployment lifecycle, including orchestration, monitoring, and security.</p>
+<p><strong>Save Changes</strong>: Once you've updated the dependencies, save the <code>install_dependencies.R</code> file.</p>
 </li>
 </ol>
-<h2 id="trivy">Trivy</h2>
-<h3 id="reasons-for-choosing-trivy">Reasons for Choosing Trivy:</h3>
+<h2 id="dockerizing-changes">Dockerizing Changes</h2>
+<p>After making modifications to the <code>app.R</code> and <code>install_dependencies.R</code> files, you'll need to ensure that Docker reflects these changes when running the containerized application.</p>
+<h3 id="steps-to-update-docker-configuration">Steps to Update Docker Configuration:</h3>
 <ol>
-<li>
-<p><strong>Comprehensive Vulnerability Database</strong>: Trivy leverages multiple vulnerability databases, including CVE, Red Hat, and Debian, to provide comprehensive coverage of security vulnerabilities. This extensive database ensures that our containerized applications are thoroughly scanned for vulnerabilities.</p>
-</li>
-<li>
-<p><strong>Fast Scanning</strong>: Trivy is optimized for speed, allowing it to quickly scan container images and provide results in a matter of seconds. This fast scanning capability enables us to integrate security checks seamlessly into our development and deployment pipelines without causing significant overhead.</p>
-</li>
-<li>
-<p><strong>Integration with CI/CD Pipelines</strong>: Trivy can be easily integrated into continuous integration and continuous delivery (CI/CD) pipelines to automate security scanning of container images during the development process. This integration ensures that security is considered from the early stages of development and is part of our DevSecOps practices.</p>
-</li>
-<li>
-<p><strong>Simple Usage</strong>: Trivy can be run as a standalone tool or integrated into other container scanning workflows, making it easy to incorporate security checks into existing development workflows. Its simple command-line interface and flexible configuration options make it accessible to developers and security teams alike.</p>
-</li>
+<li><strong>Update Docker Compose</strong>: Navigate to the root directory of your project that contains the <code>docker-compose.yml</code> file. Run the following command to bring down existing containers and then bring them up again:</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>docker-compose down &amp;&amp; docker-compose up -d
+</code></pre></div></td></tr></table></div>
+<p>This command will stop any running containers and then start them again with the updated configurations.</p>
+<ol>
+<li><strong>View Changes</strong>: Access your R Shiny application through a web browser using the specified host port. You should see the modifications reflected in the application.</li>
 </ol>
 
 
@@ -742,10 +725,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../assets/javascripts/bundle.3220b9d7.min.js"></script>
       
     
   </body>

@@ -1,13 +1,29 @@
-site_name: R-Epi-Analytics-Documentations
-site_url: https://phacdatahub.github.io/R-Epi-analytics-template/
-
-
 theme:
   name: material
+  font:
+    code: Roboto Mono
   palette:
-    primary: indigo
-    accent: blue
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"  
+      scheme: default
+      primary: blue grey
+      accent: light blue    
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
 
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue grey
+      accent: light blue 
+      toggle:
+        icon: material/brightness-2
+        name: Switch to light mode
+
+
+site_name: R-Epi-Analytics-Documentations
+site_url: https://phacdatahub.github.io/R-Epi-analytics-template/
 repo_url: https://phacdatahub.github.io/R-Epi-analytics-template/
 
 extra:
@@ -27,8 +43,7 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.highlight:
       linenums: true
-  - pymdownx.superfences      
-
+  - pymdownx.superfences
 
 nav:
   - Home: index.md

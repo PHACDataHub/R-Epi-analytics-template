@@ -2,7 +2,7 @@
 
 Docker, Trivy, and R Shiny offer a powerful tech stack for developing, containerizing, securing, and deploying web applications. With straightforward installation and deployment processes, even users with no prior experience can leverage these tools for robust application development and deployment.
 
-## Table of Contents
+## Getting Started
 
 - [Application Requirements](#application-requirements)
 - [How to Run the Application](#how-to-run-the-application)
@@ -16,6 +16,7 @@ Docker, Trivy, and R Shiny offer a powerful tech stack for developing, container
 
 ## Application Requirements
 Before running the R Shiny application and using Docker and Trivy, you'll need to install the necessary software and dependencies. Below are the installation instructions for each application:
+
 - **R Shiny**: 
   - Download R from the [R Project website](https://www.r-project.org/)
   - Get RStudio Desktop from the [RStudio website](https://posit.co/download/rstudio-desktop/)
@@ -30,16 +31,16 @@ Before running the R Shiny application and using Docker and Trivy, you'll need t
 ## How to Run the Application
 Once you have installed R, Docker, and Trivy, you can run the R Shiny application using Docker:
 
-- Navigate to the Application Directory (src/app): Open a terminal or command prompt and go to src/App.
+Navigate to the Application Directory (src/app): Open a terminal or command prompt and go to src/App.
 ```
 cd app/
 ```
 
 Run this command in the terminal Build and Run Docker Containers:
-
 ```
 docker compose up
 ```
+
 This starts the Docker containers and deploys the R Shiny application.
 
 For a more detailed explination on How to Run the Application, [click here](how_to/How-to-use.md) 
@@ -53,10 +54,12 @@ docker compose down && docker compose up
 #### By running docker compose down && docker compose up, you ensure that your Docker containers are properly stopped, any changes to your code are applied, and then the containers are restarted with the updated code. This approach helps you see the changes in your application without needing to manually stop and start the containers.
 
 For a more detailed explination on How to Run the Application, [click here](how_to/How-to-use.md) 
+
 ### Access the Application: 
 After the containers start, access the R Shiny application by opening a web browser and going to http://localhost:3838.
 
-# Techstack Overview
+
+## Techstack Overview
 
 ### Docker
 Docker is a containerization platform that simplifies the deployment and management of applications by packaging them into lightweight, portable containers. Installation is straightforward on Windows, Linux, and macOS, enabling developers to quickly adopt Docker across various operating systems.

@@ -8,28 +8,24 @@
       
       
       
-        <link rel="canonical" href="https://phacdatahub.github.io/R-Epi-analytics-template/How-to-adopt-template/">
+        <link rel="canonical" href="https://phacdatahub.github.io/R-Epi-analytics-template/techstack/Trivy/">
       
       
-        <link rel="prev" href="../How-To-Use/">
       
       
-        <link rel="next" href="../How-to-run-trivy-locally/">
-      
-      
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
     
     
       
-        <title>How to Adopt Template - R-Epi-Analytics-Documentations</title>
+        <title>Trivy: Vulnerability Scanner for Containers - R-Epi-Analytics-Documentations</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.66ac8b77.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +44,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -65,7 +61,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-gray" data-md-color-accent="blue">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -74,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#legacy-project-migration-guide-adopting-docker-trivy-and-r-shiny-structure" class="md-skip">
+        <a href="#trivy-vulnerability-scanner-for-containers" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +86,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="R-Epi-Analytics-Documentations" class="md-header__button md-logo" aria-label="R-Epi-Analytics-Documentations" data-md-component="logo">
+    <a href="../.." title="R-Epi-Analytics-Documentations" class="md-header__button md-logo" aria-label="R-Epi-Analytics-Documentations" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -110,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              How to Adopt Template
+              Trivy: Vulnerability Scanner for Containers
             
           </span>
         </div>
@@ -197,7 +193,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="R-Epi-Analytics-Documentations" class="md-nav__button md-logo" aria-label="R-Epi-Analytics-Documentations" data-md-component="logo">
+    <a href="../.." title="R-Epi-Analytics-Documentations" class="md-nav__button md-logo" aria-label="R-Epi-Analytics-Documentations" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -227,7 +223,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -244,36 +240,69 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
-    Tech Stack
+    Documentation
   </span>
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            Tech Stack
+            Documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    How To
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            How To
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -284,28 +313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../techstack/Docker/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Docker
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../How-To-Use/" class="md-nav__link">
+      <a href="../../how_to/How-to-adopt-template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -323,30 +331,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    How to Adopt Template
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../how_to/How-to-adopt-template/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -355,86 +343,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prerequisites
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#migration-steps" class="md-nav__link">
-    <span class="md-ellipsis">
-      Migration Steps
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Migration Steps">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#step-1-project-structure-adjustment" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 1 : Project Structure Adjustment
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2-docker-compose" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 2 : Docker Compose
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-3-push-to-github" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 3 : Push to GitHub
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -447,7 +355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../How-to-run-trivy-locally/" class="md-nav__link">
+      <a href="../../how_to/How-to-run-trivy-locally/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -468,7 +376,28 @@
   
   
     <li class="md-nav__item">
-      <a href="../How-to-update-pages/" class="md-nav__link">
+      <a href="../../how_to/How-website-works/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How the website is built
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../how_to/How-to-update-pages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -482,6 +411,49 @@
 
               
             
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tech Stack
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Tech Stack
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
               
                 
   
@@ -489,11 +461,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../TechStackChoices/" class="md-nav__link">
+      <a href="../Docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Tech Stack Choices
+    Docker
   </span>
   
 
@@ -510,7 +482,70 @@
   
   
     <li class="md-nav__item">
-      <a href="../Trivy_ignored_files/" class="md-nav__link">
+      <a href="../Mkdocs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mkdocs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../trivy.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trivy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../R/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    R
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Trivy_ignored_files/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -519,6 +554,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -558,62 +601,38 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#tldr" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      TLDR
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#what-is-trivy" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      What is Trivy:
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#migration-steps" class="md-nav__link">
+  <a href="#how-trivy-works" class="md-nav__link">
     <span class="md-ellipsis">
-      Migration Steps
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Migration Steps">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#step-1-project-structure-adjustment" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 1 : Project Structure Adjustment
+      How Trivy Works:
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#step-2-docker-compose" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#why-trivy-is-important" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 2 : Docker Compose
+      Why Trivy is Important:
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#step-3-push-to-github" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 3 : Push to GitHub
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -632,38 +651,52 @@
                   
 
 
-<h1 id="legacy-project-migration-guide-adopting-docker-trivy-and-r-shiny-structure">Legacy Project Migration Guide: Adopting Docker, Trivy, and R Shiny Structure</h1>
-<p>Welcome to the migration guide for bringing your legacy project into the structured environment of Docker, Trivy, and R Shiny. This guide will walk you through the steps necessary to integrate your existing project into this new environment, ensuring ease of deployment, security scanning, and running your application with R Shiny.</p>
-<h2 id="overview">Overview</h2>
-<p>This migration aims to modernize your project by introducing Docker for containerization and Trivy for security scanning. By adopting this structure, you'll benefit from improved deployment consistency and enhanced security.</p>
-<h2 id="prerequisites">Prerequisites</h2>
-<p>Before proceeding with the migration, ensure that you have the following prerequisites:</p>
-<ul>
-<li>Basic knowledge of Docker, Docker Compose, and Trivy.</li>
-<li>Familiarity with R Shiny applications.</li>
-<li>Read the <a href="../How-To-Use/">How-To-Use</a> documentation.</li>
-<li>Downloaded the required applications from the ReadMe file.</li>
-</ul>
-<h2 id="migration-steps">Migration Steps</h2>
-<h3 id="step-1-project-structure-adjustment">Step 1 : Project Structure Adjustment</h3>
-<p>Ensure your project structure aligns with the expected structure for Docker, Trivy, and R Shiny:</p>
-<ul>
+<h1 id="trivy-vulnerability-scanner-for-containers">Trivy: Vulnerability Scanner for Containers</h1>
+<h2 id="tldr">TLDR</h2>
+<p>Trivy is a container vulnerability scanner that identifies security risks in container images and filesystems, helping organizations proactively secure their containerized applications. Installation is straightforward on Windows, Linux, and macOS, ensuring ease of adoption across various operating systems.</p>
+<p>visit <a href="https://trivy.dev/">https://trivy.dev/</a> for more information</p>
+<h2 id="what-is-trivy">What is Trivy:</h2>
+<p>Trivy is a comprehensive vulnerability scanner specifically designed for containers. It scans container images and filesystems for known vulnerabilities, helping users identify and mitigate potential security risks. For example, imagine you're building a web application using Docker containers. Trivy can analyze the contents of your containers and alert you if any security vulnerabilities are found, allowing you to address them before deploying your application.</p>
+<h2 id="how-trivy-works">How Trivy Works:</h2>
+<p>Trivy works by leveraging an extensive vulnerability database to scan container images and filesystems layer by layer. It compares the contents of each layer against a database of known vulnerabilities and exposures (CVEs). If any vulnerabilities are found, Trivy generates detailed reports highlighting the severity levels of the issues and providing recommended remediation steps. This allows users to take proactive measures to secure their containerized applications.</p>
+<h2 id="why-trivy-is-important">Why Trivy is Important:</h2>
+<p>Containerized environments offer flexibility and scalability, but they also introduce security challenges. Vulnerabilities within container images can lead to serious security breaches if left unaddressed. Trivy helps organizations mitigate these risks by proactively identifying vulnerabilities in containerized applications. By addressing these vulnerabilities before deployment, organizations can enhance the overall security posture of their containerized infrastructure and protect their data and assets from potential threats.</p>
+<h1 id="installation-guide">Installation Guide</h1>
+<h2 id="windows">Windows:</h2>
+<ol>
+<li>Download the <a href="https://github.com/aquasecurity/trivy/releases">Trivy Windows</a> executable from the official GitHub releases page.</li>
+<li>Extract the downloaded ZIP file to a directory of your choice.</li>
+<li>Add the directory containing the Trivy executable to your system's PATH environment variable.</li>
+<li>Verify the installation by running <code>trivy --version</code> in the command prompt.</li>
+</ol>
+<h2 id="linux">Linux:</h2>
+<ol>
 <li>
-<p><strong>app.R</strong>: This file will contain your R Shiny application code. Place your existing product code within this file.</p>
+<p>Install Trivy via the package manager for your distribution. For example, on Debian/Ubuntu-based systems, run:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>sudo apt-get update
+sudo apt-get install -y trivy
+</code></pre></div></td></tr></table></div></p>
 </li>
 <li>
-<p><strong>install_dependancies.R</strong>: This file should list all the dependencies required for your application to run. Fill out this file with the necessary R packages and any system-level dependencies.</p>
+<p>Alternatively, download the Trivy Linux executable from the official GitHub releases page.</p>
 </li>
-</ul>
-<p>Ensure that <code>app.R</code> and <code>install_dependancies.R</code> are properly filled out before proceeding to the next step.</p>
-<h3 id="step-2-docker-compose">Step 2 : Docker Compose</h3>
-<p>Run the following command to build the image and run the app.R file on <a href="http://localhost:3838">localhost:3838</a>:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
-</code></pre></div></td></tr></table></div>
-<p>Ensure everything is correct before pushing the project to GitHub.</p>
-<h3 id="step-3-push-to-github">Step 3 : Push to GitHub</h3>
-<p>Once you are satisfied with your local setup, push the project to GitHub. This will trigger the workflow to build your Docker image and run Trivy scans. If any high or critical vulnerabilities are found, the workflow will fail, preventing the changes from being pushed to GitHub until the issues are addressed.</p>
-<p>Trivy will automatically run a scan on the image once it is pushed to GitHub.</p>
+<li>Make the downloaded file executable and move it to a directory in your PATH.</li>
+<li>Verify the installation by running <code>trivy --version</code> in the terminal.</li>
+</ol>
+<h2 id="macos">macOS:</h2>
+<ol>
+<li>
+<p>Install Trivy via Homebrew by running the following command in the terminal:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>brew install aquasecurity/trivy/trivy
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p>Alternatively, download the Trivy macOS executable from the official GitHub releases page.</p>
+</li>
+<li>Make the downloaded file executable and move it to a directory in your PATH.</li>
+<li>Verify the installation by running <code>trivy --version</code> in the terminal.</li>
+</ol>
 
 
 
@@ -725,10 +758,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.3220b9d7.min.js"></script>
+      <script src="../../assets/javascripts/bundle.3220b9d7.min.js"></script>
       
     
   </body>
