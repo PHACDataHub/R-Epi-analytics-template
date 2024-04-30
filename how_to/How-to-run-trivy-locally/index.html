@@ -8,26 +8,24 @@
       
       
       
-        <link rel="canonical" href="https://phacdatahub.github.io/R-Epi-analytics-template/Trivy_ignored_files/">
-      
-      
-        <link rel="prev" href="..">
+        <link rel="canonical" href="https://phacdatahub.github.io/R-Epi-analytics-template/how_to/How-to-run-trivy-locally/">
       
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.20">
     
     
       
-        <title>Trivy Ignored Files - R-Epi-Analytics-Documentations</title>
+        <title>How to Run Trivy with Act - R-Epi-Analytics-Documentations</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.66ac8b77.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,9 +44,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -72,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#list-of-ignored-files" class="md-skip">
+        <a href="#how-to-run-trivy-with-act" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +86,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="R-Epi-Analytics-Documentations" class="md-header__button md-logo" aria-label="R-Epi-Analytics-Documentations" data-md-component="logo">
+    <a href="../.." title="R-Epi-Analytics-Documentations" class="md-header__button md-logo" aria-label="R-Epi-Analytics-Documentations" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -108,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Trivy Ignored Files
+              How to Run Trivy with Act
             
           </span>
         </div>
@@ -195,7 +193,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="R-Epi-Analytics-Documentations" class="md-nav__button md-logo" aria-label="R-Epi-Analytics-Documentations" data-md-component="logo">
+    <a href="../.." title="R-Epi-Analytics-Documentations" class="md-nav__button md-logo" aria-label="R-Epi-Analytics-Documentations" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -225,7 +223,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -242,19 +240,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -268,7 +264,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Documentation
@@ -317,7 +313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../documentation/how_to/How-to-adopt-template.md" class="md-nav__link">
+      <a href="../../documentation/how_to/How-to-adopt-template.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -338,7 +334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../documentation/how_to/How-to-adopt-template.md" class="md-nav__link">
+      <a href="../../documentation/how_to/How-to-adopt-template.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -359,7 +355,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../documentation/how_to/How-to-run-trivy-locally.md" class="md-nav__link">
+      <a href="../../documentation/how_to/How-to-run-trivy-locally.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -380,7 +376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../documentation/how_to/How-website-works.md" class="md-nav__link">
+      <a href="../../documentation/how_to/How-website-works.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -401,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../documentation/how_to/How-to-update-pages.md" class="md-nav__link">
+      <a href="../../documentation/how_to/How-to-update-pages.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -427,19 +423,17 @@
                 
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -453,7 +447,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             Tech Stack
@@ -467,7 +461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../documentation/documentation/techstack/Docker.md" class="md-nav__link">
+      <a href="../../documentation/documentation/techstack/Docker.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -488,7 +482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../documentation/techstack/Mkdocs.md" class="md-nav__link">
+      <a href="../../documentation/techstack/Mkdocs.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -509,7 +503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../documentation/techstack/trivy.md" class="md-nav__link">
+      <a href="../../documentation/techstack/trivy.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -530,7 +524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../documentation/techstack/R.md" class="md-nav__link">
+      <a href="../../documentation/techstack/R.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -548,30 +542,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Trivy Ignored Files
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Trivy_ignored_files/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -580,35 +554,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#updated-april-16th-2024" class="md-nav__link">
-    <span class="md-ellipsis">
-      Updated: April 16th, 2024
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -656,9 +601,60 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#updated-april-16th-2024" class="md-nav__link">
+  <a href="#installing-act" class="md-nav__link">
     <span class="md-ellipsis">
-      Updated: April 16th, 2024
+      Installing Act
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing Act">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-homebrew-macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Homebrew (macOS)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-chocolatey-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Chocolatey (Windows)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-go-cross-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Go (Cross-platform)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-act-does" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Act Does
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-trivy-with-act" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running Trivy with Act
     </span>
   </a>
   
@@ -679,9 +675,48 @@
                   
 
 
-<h1 id="list-of-ignored-files">List of ignored files</h1>
-<h2 id="updated-april-16th-2024">Updated: April 16th, 2024</h2>
-<p>The decision to ignore CVE-2024-26597 in the vulnerability scan is primarily influenced by the dependency on the <code>rocker/r-ver</code> base image. The vulnerability is related to the Linux kernel and is likely to be resolved through an update of the <code>rocker/r-ver</code> image to a version that addresses CVE-2024-26597. Until such an update is made available and incorporated into the project's Dockerfile, the vulnerability remains unresolved. Therefore, ignoring CVE-2024-26597 temporarily allows the development team to prioritize updating the <code>rocker/r-ver</code> base image to a version that mitigates the vulnerability. Once the base image is updated, the ignore directive can be removed, ensuring a more comprehensive approach to addressing security vulnerabilities within the application environment. Regular maintenance and updates of base images are essential practices to maintain the security posture of containerized applications.</p>
+<h1 id="how-to-run-trivy-with-act">How to Run Trivy with Act</h1>
+<h2 id="installing-act">Installing Act</h2>
+<p>Act is a command-line tool that allows you to run GitHub Actions locally. This can be useful for testing your GitHub Actions workflows before pushing changes to GitHub. Here's how to install Act:</p>
+<h3 id="using-homebrew-macos">Using Homebrew (macOS)</h3>
+<p>If you're on macOS and have Homebrew installed, you can install Act using the following command:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>brew install act
+</code></pre></div></td></tr></table></div></p>
+<h3 id="using-chocolatey-windows">Using Chocolatey (Windows)</h3>
+<p>If you're on Windows and have Chocolatey installed, you can install Act using the following command:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>choco install act-cli
+</code></pre></div></td></tr></table></div></p>
+<h3 id="using-go-cross-platform">Using Go (Cross-platform)</h3>
+<p>Alternatively, you can install Act using Go:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>go install github.com/nektos/act@latest
+</code></pre></div></td></tr></table></div></p>
+<h2 id="what-act-does">What Act Does</h2>
+<p>Act allows you to run GitHub Actions workflows locally, simulating the execution environment and providing feedback on how your workflows will behave in a GitHub Actions environment. This can help you catch potential issues and debug your workflows before pushing changes to GitHub.</p>
+<h2 id="running-trivy-with-act">Running Trivy with Act</h2>
+<p>Assuming you have a GitHub Actions workflow that includes a Trivy scan step, you can use Act to run the Trivy scan locally. Here's how:</p>
+<ol>
+<li>
+<p>Navigate to the directory containing your GitHub Actions workflow files.</p>
+</li>
+<li>
+<p>Open a terminal window.</p>
+</li>
+<li>
+<p>From the root directory of your project, run the following command to execute the GitHub Actions workflow locally:</p>
+</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>act 
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>
+<p>Act will output the progress of the job, including any log messages or errors encountered during execution.</p>
+</li>
+<li>
+<p>Once the job completes, you can review the output to identify any vulnerabilities detected by Trivy.</p>
+</li>
+</ol>
+<p>By using Act to run the Trivy scan locally, you can verify the behavior of your Trivy scan job and ensure that it functions as expected before pushing changes to GitHub.</p>
+<p>For items where there is currently no solution, see the <a href="Trivy_ignored_files.md">.trivyignore file</a>. It contains an explanation of why the vulnerability has been ignored and the date when it was last updated. It is advised to review these items periodically to check if the vulnerabilities have been addressed.</p>
 
 
 
@@ -743,10 +778,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.dd8806f2.min.js"></script>
+      <script src="../../assets/javascripts/bundle.dd8806f2.min.js"></script>
       
     
   </body>
